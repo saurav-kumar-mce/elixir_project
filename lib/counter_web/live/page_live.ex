@@ -16,7 +16,7 @@ defmodule CounterWeb.PageLive do
     def handle_event("dec", _params, socket) do
         {:noreply,
         socket
-        |> update(:number, &max(0, &1 - 1))}
+        |> update(:number,&(&1 - 1))}
     end
 
     def handle_event("clear", _params, socket) do
